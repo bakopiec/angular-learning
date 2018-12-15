@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl" ng-app>
+<html lang="pl" ng-app="App">
 <head>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <title>Menedżer kontaktów</title>
 </head>
-<body>
+<body ng-controller="AppCtrl">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="/">Menadżer kontaktów</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -31,5 +31,18 @@
             </form>
         </div>
     </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <button ng-click="clickHandler()">kliknij mnie</button>
+                <div ng-hide="isHidden">
+                    Kliknik przycisk powyżej, aby przełączyć widoczność.
+                </div>
+            </div>
+            <div class="col-sm-4">
+                To jest pasek boczny.
+            </div>
+        </div>
+    </div>
 </body>
 </html>
