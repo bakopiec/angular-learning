@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <base href="/">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-route.min.js"></script>
+    <script type="text/javascript" src="js/controller.js"></script>
+    <meta charset="UTF-8">
+    <title>Menedżer kontaktów</title>
+</head>
+<body ng-app="contactsMgr">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Menadżer kontaktów</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#nav-toogle" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav-toogle">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Przeglądaj</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/add-contact">Dodaj kontakt</a>
+                </li>
+            </ul>
+            <form class="form-inline ml-auto" role="search">
+                <input class="from-control" type="text" placeholder="Szukaj">
+            </form>
+        </div>
+    </nav>
+    <div class="container">
+        <ng-view></ng-view>
+    </div>
+</body>
+</html>
