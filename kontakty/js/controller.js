@@ -50,8 +50,25 @@ angular
 //     var result = $filter('truncate')('lasdkflasflsddf', 10);
 //     console.log(result);
 // })
-.controller('indexCtrl', function($scope) {
-
+.controller('indexCtrl', function($scope, $rootScope) {
+    $rootScope.contacts = [
+        {
+            name:'Stefan Autorski',
+            phone:'01234543210',
+            address:'al.Inna 12\nKrzyżówkowo\n11-111',
+            email:'steve228uk@gmail.com',
+            website:'stefanautorski.to'
+        },
+        {
+            name:'Janko Walski',
+            phone:'0123456789',
+            address:'Zagadkowa 123\nSzaradaDuża\n10-010 Polska',
+            email:'janko@walski.com',
+            website:'http://janko-walski.info',
+            notes:'Kilka słów na temat Janko'
+        }
+    ];
+    $scope.contacts = $rootScope.contacts;
 })
 .controller('addCtrl', function($scope) {
 

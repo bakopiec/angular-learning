@@ -12,17 +12,13 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Karn Nerka</td>
-                <td>karenne@email.com</td>
-                <td>01234 56734</td>
-                <td><a href="#" class="btn btn-light btn-sm">Wyświetl</a></td>
-            </tr>
-            <tr>
-                <td>Janko Walski</td>
-                <td>janko@walski.com</td>
-                <td>01234 567890</td>
-                <td><a href="#" class="btn btn-light btn-sm">Wyświetl</a></td>
+            <tr ng-repeat="contact in contacts">
+                <td>{{contact.name}}</td>
+                <td>{{contact.email}}</td>
+                <td>{{contact.phone}}</td>
+                <td>
+                    <a href="/contact/{{$index}}" class="btn btn-default btn-xs">Wyświetl</a>
+                </td>
             </tr>
         </tbody>
     </table>
